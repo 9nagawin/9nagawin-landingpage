@@ -1,0 +1,499 @@
+/* ===================================
+   RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0b0b;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ===================================
+   BACKGROUND
+=================================== */
+
+.background{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+
+    background:#0b0b0b;
+
+    background-image:
+        radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+
+    background-size:8px 8px;
+}
+
+.background{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.75)
+    ),
+    url("images/background.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    animation:bgZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes bgZoom{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.05);
+    }
+}
+
+/* ===================================
+   CONTAINER
+=================================== */
+
+.container{
+
+    width:95%;
+
+    max-width:520px;
+
+    margin:35px auto;
+
+    text-align:center;
+
+}
+
+/* ===================================
+   LOGO
+=================================== */
+
+.logo{
+
+    width:200px;
+
+    display:block;
+
+    margin:auto;
+
+    filter:
+    drop-shadow(0 0 18px rgba(255,215,0,.6));
+
+    animation:logoFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes logoFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===================================
+   TITLE
+=================================== */
+
+.title{
+
+    color:#FFD700;
+
+    font-size:34px;
+
+    margin-top:15px;
+
+    text-shadow:
+    0 0 15px rgba(255,215,0,.45);
+
+}
+
+.subtitle{
+
+    color:#dddddd;
+
+    margin-top:12px;
+
+    margin-bottom:22px;
+
+    font-size:15px;
+
+}
+/* ===================================
+   TOMBOL
+=================================== */
+
+.btn{
+    display:block;
+    width:100%;
+    padding:18px;
+    margin:25px 0;
+    border-radius:14px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    color:#fff;
+
+    background:linear-gradient(90deg,#0066ff,#0d8bff);
+
+    box-shadow:0 0 20px rgba(0,102,255,.45);
+
+    transition:.35s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 30px rgba(255,215,0,.6);
+}
+
+/* ===================================
+   BANNER
+=================================== */
+
+.banner-card{
+    padding:5px;
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#FFD700,#ffb300);
+
+    margin-bottom:25px;
+
+    box-shadow:0 0 25px rgba(255,215,0,.35);
+}
+
+.banner{
+    width:100%;
+    display:block;
+    border-radius:14px;
+    transition:.35s;
+}
+
+.banner:hover{
+    transform:scale(1.02);
+}
+
+/* ===================================
+   TABLE
+=================================== */
+
+.menu-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:25px;
+    overflow:hidden;
+    border-radius:14px;
+}
+
+.menu-table th{
+    background:#d8a200;
+    color:#111;
+    padding:16px;
+    font-size:16px;
+}
+
+.menu-table td{
+    background:#111;
+    color:#fff;
+    border:1px solid #2d2d2d;
+    padding:16px;
+    text-align:center;
+}
+
+.menu-table td a{
+    display:inline-block;
+    background:#1565ff;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.menu-table td a:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 18px rgba(255,215,0,.6);
+}
+
+/* ===================================
+   CONTACT
+=================================== */
+
+.contact{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.contact a{
+    flex:1;
+    padding:16px;
+    text-decoration:none;
+    color:#fff;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.wa{
+    background:#25D366;
+}
+
+.tele{
+    background:#229ED9;
+}
+
+.contact a:hover{
+    transform:translateY(-3px);
+}
+/* ===================================
+   FOOTER
+=================================== */
+
+footer{
+    margin-top:30px;
+    text-align:center;
+    color:#8a8a8a;
+    font-size:13px;
+}
+
+/* ===================================
+   ANIMASI
+=================================== */
+
+.logo{
+    animation:
+    logoFloat 3s ease-in-out infinite,
+    logoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow{
+
+0%{
+filter:drop-shadow(0 0 10px rgba(255,215,0,.4));
+}
+
+100%{
+filter:drop-shadow(0 0 25px rgba(255,215,0,.9));
+}
+
+}
+
+.title{
+
+animation:titleGlow 2s infinite alternate;
+
+}
+
+@keyframes titleGlow{
+
+0%{
+
+text-shadow:
+0 0 10px rgba(255,215,0,.4);
+
+}
+
+100%{
+
+text-shadow:
+0 0 15px gold,
+0 0 30px rgba(255,215,0,.7);
+
+}
+
+}
+
+.btn{
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.02);
+box-shadow:0 0 30px rgba(255,215,0,.6);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+.banner{
+
+animation:bannerGlow 3s infinite alternate;
+
+}
+
+@keyframes bannerGlow{
+
+0%{
+
+box-shadow:
+0 0 15px rgba(255,215,0,.2);
+
+}
+
+100%{
+
+box-shadow:
+0 0 35px rgba(255,215,0,.6);
+
+}
+
+}
+
+/* ===================================
+   ANIMASI MASUK
+=================================== */
+
+.container{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+
+.container{
+
+width:94%;
+
+}
+
+.logo{
+
+width:170px;
+
+}
+
+.title{
+
+font-size:28px;
+
+}
+
+.subtitle{
+
+font-size:14px;
+
+}
+
+.contact{
+
+flex-direction:column;
+
+}
+
+.btn{
+
+font-size:16px;
+
+padding:16px;
+
+}
+
+.menu-table th,
+.menu-table td{
+
+padding:12px;
+
+}
+
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#555;
+border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#888;
+
+}
